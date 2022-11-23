@@ -6,7 +6,7 @@ import { SortTypes } from "./SortBarTypes"
 const SortBar = ({ selectValue, setSelectValue, ships, setSortSettings }: SortTypes) => {
     return <SortBarContainer>
         <Select onChange={(event) => {
-            // setSortSettings('')
+            setSortSettings('')
             setSelectValue(event.target.value)
         }}
             value={selectValue}>
