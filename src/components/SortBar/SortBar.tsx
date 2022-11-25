@@ -1,9 +1,11 @@
+import { useContext } from "react"
+import { DataContext } from "../../Providers/DataProvider"
 import { SortBarContainer, Select, SortButton, Option } from "./SortBar.styles"
-import { SortTypes } from "./SortBarTypes"
 
 
+const SortBar = () => {
 
-const SortBar = ({ selectValue, setSelectValue, ships, setSortSettings }: SortTypes) => {
+    let { selectValue, setSelectValue, ships, setSortSettings } = useContext(DataContext)
     return <SortBarContainer>
         <Select onChange={(event) => {
             setSortSettings('')
